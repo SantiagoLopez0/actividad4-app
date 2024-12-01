@@ -1,100 +1,115 @@
-import Image from "next/image";
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="font-sans bg-gray-200">
+      <Head>
+        <title>Interfaz</title>
+        <meta name="description" content="Página de ejemplo creada con Next.js" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+          rel="stylesheet"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Header */}
+      <header className="bg-white shadow">
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="text-lg font-bold">LOGO</div>
+          <nav className="flex items-center space-x-4">
+            <a href="#" className="text-gray-700 hover:text-gray-900">Link 1</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">Link 2</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">Link 3</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">Link 4</a>
+            <a href="#" className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-900">CTA</a>
+          </nav>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-gray-700 text-white text-center py-20">
+        <h1 className="text-4xl font-bold mb-4">TÍTULO DE LA PÁGINA</h1>
+        <p className="mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button className="px-6 py-2 bg-white text-gray-700 rounded hover:bg-gray-200">Button</button>
+      </section>
+
+      {/* Placeholder Section */}
+      <section className="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 className="text-2xl font-bold mb-4">PLACEHOLDER</h2>
+          <p className="mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Benefit of Feature</li>
+            <li>Benefit of Feature</li>
+            <li>Benefit of Feature</li>
+          </ul>
+          <button className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-900">Button</button>
+        </div>
+        <div className="bg-gray-700 h-64"></div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gray-700 text-white text-center py-20">
+        <h2 className="text-2xl font-bold mb-4">TÍTULO CTA</h2>
+        <p className="mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button className="px-6 py-2 bg-white text-gray-700 rounded hover:bg-gray-200">Button</button>
+      </section>
+
+      {/* Cards Section */}
+      <section className="container mx-auto px-6 py-16 text-center">
+        <h2 className="text-2xl font-bold mb-4">TÍTULO DE SECCIÓN</h2>
+        <p className="mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-gray-700 h-40 text-white flex items-center justify-center rounded">
+            Título<br /><a href="#" className="text-blue-400">LINK</a>
+          </div>
+          <div className="bg-gray-700 h-40 text-white flex items-center justify-center rounded">
+            Título<br /><a href="#" className="text-blue-400">LINK</a>
+          </div>
+          <div className="bg-gray-700 h-40 text-white flex items-center justify-center rounded">
+            Título<br /><a href="#" className="text-blue-400">LINK</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Section */}
+      <section className="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="bg-gray-700 h-64"></div>
+        <div>
+          <h2 className="text-2xl font-bold mb-4">PLACEHOLDER</h2>
+          <p className="mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Benefit of Feature</li>
+            <li>Benefit of Feature</li>
+            <li>Benefit of Feature</li>
+          </ul>
+          <button className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-900">Button</button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white text-gray-700 py-8">
+        <div className="container mx-auto px-6 text-center space-y-4">
+          <div className="font-bold">LOGO</div>
+          <nav className="space-x-4">
+            <a href="#" className="text-gray-700 hover:text-gray-900">LINK</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">LINK</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">LINK</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">LINK</a>
+          </nav>
+          <p className="text-gray-500">Todos los derechos reservados.</p>
+        </div>
       </footer>
     </div>
   );
