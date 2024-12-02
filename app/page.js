@@ -1,8 +1,16 @@
-import Head from 'next/head';
+import Link from 'next/link';
+import Head from 'next/head'
+import Header from "./ui/header";
+import Image from 'next/image';
+import { Poppins } from "next/font/google";
+
+import "./globals.css";
+
+const poppins = Poppins({ subsets: ['latin'], weight: ["200", "400","800"], });
 
 export default function Home() {
   return (
-    <div className="font-sans bg-gray-200">
+    <div className={`${poppins.className} font-sans bg-gray-200`}>
       <Head>
         <title>Interfaz</title>
         <meta name="description" content="Página de ejemplo creada con Next.js" />
@@ -13,88 +21,110 @@ export default function Home() {
         />
       </Head>
 
-      {/* Header */}
-      <header className="bg-white shadow">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-lg font-bold">LOGO</div>
-          <nav className="flex items-center space-x-4">
-            <a href="#" className="text-gray-700 hover:text-gray-900">Link 1</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">Link 2</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">Link 3</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">Link 4</a>
-            <a href="#" className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-900">CTA</a>
-          </nav>
-        </div>
-      </header>
+      
+      <Header />
 
-      {/* Hero Section */}
-      <section className="bg-gray-700 text-white text-center py-20">
-        <h1 className="text-4xl font-bold mb-4">TÍTULO DE LA PÁGINA</h1>
+      
+      <section className="bg-gray-700 text-white text-center py-[96px] h-[700px] flex flex-col justify-center items-center hero">
+        <h1 className="text-4xl mb-4">Capturamos la esencia de cada propiedad</h1>
         <p className="mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Transformamos espacios en imágenes irresistibles para ayudarte a vender más rápido.
         </p>
-        <button className="px-6 py-2 bg-white text-gray-700 rounded hover:bg-gray-200">Button</button>
+        <button className=" py-2 bg-white text-gray-700 rounded hover:bg-gray-200">¡CONTACTANOS!</button>
       </section>
 
       {/* Placeholder Section */}
-      <section className="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <section className="container mx-auto px-6 py-[96px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-black">
         <div>
-          <h2 className="text-2xl font-bold mb-4">PLACEHOLDER</h2>
+          <h2 className="text-2xl mb-4">Pasión por la excelencia visual</h2>
           <p className="mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Somos expertos en fotografía inmobiliaria. Trabajamos junto a agentes de bienes raíces para destacar las mejores características de cada propiedad y atraer a los compradores ideales.
           </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Benefit of Feature</li>
-            <li>Benefit of Feature</li>
-            <li>Benefit of Feature</li>
-          </ul>
-          <button className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-900">Button</button>
+          <button className="bg-gray-700 text-white hover:bg-gray-900">Button</button>
         </div>
-        <div className="bg-gray-700 h-64"></div>
+        <div className="bg-gray-700 h-[360px] rounded-[6px]">
+                <Image
+                    src='/1.jpg'
+                    width={1000}
+                    height={360}
+                    alt='placeholder 1'
+                    className="rounded-[6px] max-h-[360px] object-cover	"
+                />
+        </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-700 text-white text-center py-20">
-        <h2 className="text-2xl font-bold mb-4">TÍTULO CTA</h2>
+      <section className="bg-gray-700 text-white text-center py-[96px]">
+        <h2 className="mb-4"> ¿Listo para destacar tus propiedades?</h2>
         <p className="mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Agenda una sesión de fotos profesional y sorprende a tus clientes con imágenes de alto impacto.
         </p>
-        <button className="px-6 py-2 bg-white text-gray-700 rounded hover:bg-gray-200">Button</button>
+        <button className="px-6 py-2 bg-white text-gray-700 rounded hover:bg-gray-200">CONTACTANOS</button>
       </section>
 
       {/* Cards Section */}
-      <section className="container mx-auto px-6 py-16 text-center">
-        <h2 className="text-2xl font-bold mb-4">TÍTULO DE SECCIÓN</h2>
+      <section className="container mx-auto px-6 py-[96px] text-center text-black">
+        <h2 className="text-2xl font-bold mb-4">Nuestros Servicios</h2>
         <p className="mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Explora lo que tenemos que ofrecerte.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-gray-700 h-40 text-white flex items-center justify-center rounded">
-            Título<br /><a href="#" className="text-blue-400">LINK</a>
+          <div className='flex flex-col justify-left align-start'>
+            <div className="bg-gray-700 h-[200px] flex items-center justify-center rounded">
+              <Image
+                src='/bg.jpg'
+                width={1000}
+                height={360}
+                alt='placeholder 2'
+                className="rounded-[6px] max-h-[200px] object-cover	"
+              />
+            </div>
+            <p className='text-left'>Tomas aéreas con drones</p>
           </div>
-          <div className="bg-gray-700 h-40 text-white flex items-center justify-center rounded">
-            Título<br /><a href="#" className="text-blue-400">LINK</a>
+          <div className='flex flex-col justify-left align-start'>
+          <div className="bg-gray-700 h-[200px] flex items-center justify-center rounded">
+              <Image
+                src='/bg.jpg'
+                width={1000}
+                height={360}
+                alt='placeholder 2'
+                className="rounded-[6px] max-h-[200px] object-cover	"
+              />
+            </div>
+            <p className='text-left'>Fotografía profesional de interiores</p>
           </div>
-          <div className="bg-gray-700 h-40 text-white flex items-center justify-center rounded">
-            Título<br /><a href="#" className="text-blue-400">LINK</a>
+          <div className='flex flex-col justify-left align-start'>
+          <div className="bg-gray-700 h-[200px] flex items-center justify-center rounded">
+              <Image
+                src='/bg.jpg'
+                width={1000}
+                height={360}
+                alt='placeholder 2'
+                className="rounded-[6px] max-h-[200px] object-cover	"
+              />
+            </div>
+            <p className='text-left'>Edición avanzada de imágenes</p>
           </div>
         </div>
       </section>
 
-      {/* Final Section */}
-      <section className="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="bg-gray-700 h-64"></div>
+      {/* Placeholder Section */}
+      <section className="container mx-auto px-6 pb-[96px] pt-[0] grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-black">
+        <div className="bg-gray-700 h-[360px] rounded-[6px]">
+          <Image
+            src='/3.jpg'
+            width={1000}
+            height={360}
+            alt='placeholder 2'
+            className="rounded-[6px] max-h-[360px] object-cover	"
+          />
+        </div>
         <div>
-          <h2 className="text-2xl font-bold mb-4">PLACEHOLDER</h2>
+          <h2 className="text-2xl mb-4">Descubre cómo podemos ayudarte aún más</h2>
           <p className="mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Conoce todos nuestros servicios y lleva tu estrategia de ventas al siguiente nivel
           </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Benefit of Feature</li>
-            <li>Benefit of Feature</li>
-            <li>Benefit of Feature</li>
-          </ul>
-          <button className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-900">Button</button>
+          <button className="bg-gray-700 text-white hover:bg-gray-900">VER TODOS</button>
         </div>
       </section>
 
@@ -103,10 +133,10 @@ export default function Home() {
         <div className="container mx-auto px-6 text-center space-y-4">
           <div className="font-bold">LOGO</div>
           <nav className="space-x-4">
-            <a href="#" className="text-gray-700 hover:text-gray-900">LINK</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">LINK</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">LINK</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">LINK</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">INICIO</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">ACERCA DE</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">SERVICIOS</a>
+            <a href="#" className="text-gray-700 hover:text-gray-900">CONTACTO</a>
           </nav>
           <p className="text-gray-500">Todos los derechos reservados.</p>
         </div>

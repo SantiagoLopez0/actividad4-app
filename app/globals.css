@@ -17,5 +17,44 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  font-weight: 200;
+  font-size: 50px!important;
+  text-transform: uppercase!important;
+}
+h2{
+  font-weight: 200;
+  font-size: 42px!important;
+  text-transform: uppercase!important;
+}
+h3{
+  font-weight: 200;
+  font-size: 30px!important;
+  text-transform: uppercase!important;
+}
+h4{
+  font-weight: 200;
+  text-transform: uppercase!important;
+}
+button{
+  width: 190px;
+  padding: 18px 0!important;
+  text-transform: uppercase!important;
+  border-radius: 6px;
+}
+.hero{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a{
+  color: #000!important;
+  text-decoration: underline;
+}
+p{
+  font-size: 16px!important;
 }
