@@ -36,13 +36,20 @@ h3{
 }
 h4{
   font-weight: 200;
+  font-size: 20px!important;
   text-transform: uppercase!important;
 }
-button{
+.button{
   width: 190px;
-  padding: 18px 0!important;
+  text-align: center;
+  height: 60px!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase!important;
   border-radius: 6px;
+  font-weight: 400!important;
+  text-decoration: none!important;
 }
 .hero{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/2.jpg);
@@ -51,10 +58,13 @@ button{
   background-attachment: fixed;
 }
 
-a{
+a:not(.button){
   color: #000!important;
   text-decoration: underline;
 }
 p{
   font-size: 16px!important;
+}
+header a{
+  text-decoration: none!important;
 }

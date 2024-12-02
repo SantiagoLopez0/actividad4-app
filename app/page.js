@@ -30,17 +30,17 @@ export default function Home() {
         <p className="mb-6">
         Transformamos espacios en imágenes irresistibles para ayudarte a vender más rápido.
         </p>
-        <button className=" py-2 bg-white text-gray-700 rounded hover:bg-gray-200">¡CONTACTANOS!</button>
+        <Link href='/contacto' className=" bg-white text-gray-700 rounded hover:bg-gray-200 button">¡CONTACTANOS!</Link>
       </section>
 
-      {/* Placeholder Section */}
+      
       <section className="container mx-auto px-6 py-[96px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-black">
         <div>
           <h2 className="text-2xl mb-4">Pasión por la excelencia visual</h2>
           <p className="mb-4">
           Somos expertos en fotografía inmobiliaria. Trabajamos junto a agentes de bienes raíces para destacar las mejores características de cada propiedad y atraer a los compradores ideales.
           </p>
-          <button className="bg-gray-700 text-white hover:bg-gray-900">Button</button>
+          <Link href='/acerca-de' className="bg-gray-700 text-white hover:bg-gray-900 button">VER MÁS</Link>
         </div>
         <div className="bg-gray-700 h-[360px] rounded-[6px]">
                 <Image
@@ -53,16 +53,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      
       <section className="bg-gray-700 text-white text-center py-[96px]">
         <h2 className="mb-4"> ¿Listo para destacar tus propiedades?</h2>
         <p className="mb-6">
         Agenda una sesión de fotos profesional y sorprende a tus clientes con imágenes de alto impacto.
         </p>
-        <button className="px-6 py-2 bg-white text-gray-700 rounded hover:bg-gray-200">CONTACTANOS</button>
+        <Link href='/contacto' className="mx-auto px-6 py-2 bg-white text-gray-700 rounded hover:bg-gray-200 button">CONTACTANOS</Link>
       </section>
 
-      {/* Cards Section */}
+      
       <section className="container mx-auto px-6 py-[96px] text-center text-black">
         <h2 className="text-2xl font-bold mb-4">Nuestros Servicios</h2>
         <p className="mb-8">
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Placeholder Section */}
+      
       <section className="container mx-auto px-6 pb-[96px] pt-[0] grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-black">
         <div className="bg-gray-700 h-[360px] rounded-[6px]">
           <Image
@@ -124,19 +124,18 @@ export default function Home() {
           <p className="mb-4">
           Conoce todos nuestros servicios y lleva tu estrategia de ventas al siguiente nivel
           </p>
-          <button className="bg-gray-700 text-white hover:bg-gray-900">VER TODOS</button>
+          <Link href='/servicios' className="bg-gray-700 text-white hover:bg-gray-900 button">VER TODOS</Link>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-white text-gray-700 py-8">
         <div className="container mx-auto px-6 text-center space-y-4">
           <div className="font-bold">LOGO</div>
           <nav className="space-x-4">
-            <a href="#" className="text-gray-700 hover:text-gray-900">INICIO</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">ACERCA DE</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">SERVICIOS</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900">CONTACTO</a>
+            <a href="" className="text-gray-700 hover:text-gray-900">INICIO</a>
+            <a href="/acerca-de" className="text-gray-700 hover:text-gray-900">ACERCA DE</a>
+            <a href="/servicios" className="text-gray-700 hover:text-gray-900">SERVICIOS</a>
+            <a href="/contacto" className="text-gray-700 hover:text-gray-900">CONTACTO</a>
           </nav>
           <p className="text-gray-500">Todos los derechos reservados.</p>
         </div>
