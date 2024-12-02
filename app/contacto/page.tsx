@@ -46,7 +46,6 @@ export default function Contact() {
             />
             <textarea
               placeholder="Mensaje"
-              rows="4"
               className="border p-2 rounded"
             ></textarea>
             <button className="bg-gray-700 text-white hover:bg-gray-900 button">
